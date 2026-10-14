@@ -1,0 +1,34 @@
+name: Katkı yılanı
+
+on:
+  schedule:
+    - cron: "20 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu al
+        uses: actions/checkout@v5
+      - name: Katkı yılanı görsellerini oluştur
+        uses: Platane/snk@v3.5.0
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#00f5ff
+      - name: Oluşan görselleri kaydet
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add dist
+          if git diff --cached --quiet; then
+            echo "Görseller güncel."
+          else
+            git commit -m "Katkı yılanı görsellerini güncelle"
+            git push
+          fi
