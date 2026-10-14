@@ -3,7 +3,7 @@
 
   <h1>UMUT BERK İNCE</h1>
   <p><strong>Öğreniyor, üretiyor ve her projede yeni bir şey keşfediyorum.</strong></p>
-  <p><code>İstanbul, Türkiye</code> · <a href="https://github.com/umutberknc">@umutberknc</a></p>
+  <p><a href="https://github.com/umutberknc">@umutberknc</a></p>
 </div>
 
 ---
