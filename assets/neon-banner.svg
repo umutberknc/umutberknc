@@ -1,22 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
-  <title id="title">Neon grid</title>
-  <desc id="desc">Turkuaz ve mor neon ışıklar içeren koyu cyberpunk ızgara.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="440" viewBox="0 0 1440 440" role="img" aria-labelledby="title desc">
+  <title id="title">Umut Berk İnce — Neon profil başlığı</title>
+  <desc id="desc">Siberpunk şehir çizgileri, neon çerçeve, parlak turkuaz ve fuşya ışıklarla hazırlanmış profil başlığı.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#070914"/><stop offset=".55" stop-color="#11102a"/><stop offset="1" stop-color="#071b25"/>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#060611"/><stop offset=".48" stop-color="#130923"/><stop offset="1" stop-color="#061a25"/>
     </linearGradient>
-    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ff3cac"/><stop offset=".5" stop-color="#784ba0"/><stop offset="1" stop-color="#00f5ff"/>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff3cac"/><stop offset=".48" stop-color="#a970ff"/><stop offset="1" stop-color="#00f5ff"/>
     </linearGradient>
-    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse" patternTransform="skewY(-18)">
-      <path d="M48 0H0V48" fill="none" stroke="#00f5ff" stroke-opacity=".16" stroke-width="1"/>
+    <linearGradient id="beam" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#00f5ff" stop-opacity="0"/><stop offset="1" stop-color="#00f5ff" stop-opacity=".55"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ff3cac" stop-opacity=".32"/><stop offset="1" stop-color="#a970ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="floor" width="56" height="30" patternUnits="userSpaceOnUse" patternTransform="skewY(-25)">
+      <path d="M0 0H56M0 0V30" fill="none" stroke="#00f5ff" stroke-opacity=".18" stroke-width="1"/>
     </pattern>
-    <filter id="blur"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="textGlow" x="-30%" y="-50%" width="160%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip"><rect x="8" y="8" width="1424" height="424" rx="24"/></clipPath>
   </defs>
-  <rect width="1200" height="300" rx="20" fill="url(#bg)"/>
-  <rect width="1200" height="300" rx="20" fill="url(#grid)"/>
-  <path d="M0 245 Q250 175 490 235 T940 210 T1200 230" fill="none" stroke="url(#glow)" stroke-width="18" opacity=".45" filter="url(#blur)"/>
-  <path d="M0 245 Q250 175 490 235 T940 210 T1200 230" fill="none" stroke="url(#glow)" stroke-width="2" opacity=".8"/>
-  <circle cx="100" cy="70" r="2" fill="#00f5ff"/><circle cx="1070" cy="82" r="2" fill="#ff3cac"/>
-  <circle cx="980" cy="255" r="2" fill="#00f5ff"/><circle cx="220" cy="210" r="2" fill="#ff3cac"/>
+  <g clip-path="url(#clip)">
+    <rect width="1440" height="440" fill="url(#night)"/>
+    <ellipse cx="720" cy="195" rx="520" ry="245" fill="url(#sun)"/>
+    <path d="M0 115H1440M0 155H1440M0 195H1440M0 235H1440" stroke="#a970ff" stroke-opacity=".09"/>
+    <g fill="#0b1227" stroke="#00f5ff" stroke-opacity=".36" stroke-width="1">
+      <path d="M0 320V205h58v115h18V160h64v160h20V225h44v95h18V178h78v142h21V228h52v92h24V188h69v132h22V216h45v104h24V164h64v156h23V214h62v106h26V184h76v136h22V226h61v94h24V160h67v160h20V204h51v116h28V174h66v146h22V220h58v100h22V180h66v140h21V226h62v94h23V162h72v158h21V210h72v110h20V192h60v128h22V226h64v94h24V174h56v146h18V208h74v112h22v-96h75v96h22V220h64v100h20V184h60v136h32v120H0z"/>
+    </g>
+    <g fill="url(#beam)" opacity=".7">
+      <path d="M45 220h8v22h-8zM129 176h8v20h-8zM225 243h7v18h-7zM307 194h8v24h-8zM402 207h7v20h-7zM509 181h8v27h-8zM603 231h7v17h-7zM718 193h8v23h-8zM825 209h7v19h-7zM918 178h8v28h-8zM1032 234h7v18h-7zM1123 191h8v23h-8zM1224 218h7v19h-7zM1340 190h8v25h-8z"/>
+    </g>
+    <path d="M0 315H1440" stroke="#00f5ff" stroke-width="2" opacity=".65" filter="url(#softGlow)"/>
+    <path d="M0 316H1440V440H0z" fill="url(#floor)" opacity=".7"/>
+    <path d="M720 316L560 440M720 316L650 440M720 316L790 440M720 316L900 440M0 370H1440M0 408H1440" stroke="#ff3cac" stroke-opacity=".22"/>
+    <g fill="none" stroke="url(#neon)" filter="url(#softGlow)">
+      <path d="M90 92h170l24-24h112" stroke-width="2" opacity=".85"/>
+      <path d="M1350 89h-170l-24-24h-96" stroke-width="2" opacity=".85"/>
+      <path d="M98 104v38m1244-38v38" stroke-width="2" opacity=".7"/>
+      <circle cx="260" cy="92" r="5" fill="#00f5ff" stroke="none"/>
+      <circle cx="1180" cy="89" r="5" fill="#ff3cac" stroke="none"/>
+    </g>
+    <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+      <text x="720" y="145" fill="#d8c9ff" font-size="15" letter-spacing="8">ÖĞRENEN · ÜRETEN · GELİŞEN</text>
+      <text x="720" y="228" fill="#ff3cac" opacity=".72" font-size="62" font-weight="800" letter-spacing="6" filter="url(#textGlow)">UMUT BERK İNCE</text>
+      <text x="720" y="228" fill="#f7f4ff" font-size="62" font-weight="800" letter-spacing="6">UMUT BERK İNCE</text>
+      <text x="720" y="273" fill="#00f5ff" font-size="18" letter-spacing="4">DİJİTAL FİKİRLERİ ÜRÜNE DÖNÜŞTÜRÜYORUM</text>
+    </g>
+    <g font-family="monospace" font-size="11" letter-spacing="2" fill="#9ca8d6" opacity=".9">
+      <text x="102" y="380">FİKİR / TASARIM / ÜRÜN</text>
+      <text x="1180" y="380">GELİŞTİRME · ÖĞRENME</text>
+    </g>
+    <g fill="#00f5ff">
+      <circle cx="180" cy="276" r="2"><animate attributeName="opacity" values=".25;1;.25" dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="1230" cy="250" r="2"><animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite"/></circle>
+      <circle cx="1100" cy="120" r="2"><animate attributeName="opacity" values=".2;1;.2" dur="2s" repeatCount="indefinite"/></circle>
+    </g>
+    <path d="M12 62V20h42M1386 20h42v42M12 378v42h42M1386 420h42v-42" fill="none" stroke="url(#neon)" stroke-width="3" filter="url(#softGlow)"/>
+    <path d="M12 52V20h32M1396 20h32v32M12 388v32h32M1396 420h32v-32" fill="none" stroke="#eae4ff" stroke-opacity=".78" stroke-width="1"/>
+    <rect x="8" y="8" width="1424" height="424" rx="24" fill="none" stroke="url(#neon)" stroke-width="2" opacity=".8"/>
+    <rect x="9" y="9" width="1422" height="422" rx="23" fill="none" stroke="#fff" stroke-opacity=".1"/>
+    <path d="M0 20H1440" stroke="#fff" stroke-opacity=".18" stroke-width="2">
+      <animate attributeName="d" values="M0 20H1440;M0 420H1440;M0 20H1440" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".04;.3;.04" dur="9s" repeatCount="indefinite"/>
+    </path>
+  </g>
 </svg>
