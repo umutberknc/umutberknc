@@ -16,7 +16,6 @@ Yazılım geliştirme yolculuğunun başındayım. Farklı fikirleri çalışan 
 
 | Proje | Açıklama |
 |---|---|
-| [TURK Label](https://turklabel.com) | Kendi projem. Ürünleri Amazon pazar yerlerinde listeleme sürecini yapay zekâ ve otomasyonla kolaylaştırmaya odaklanıyor. |
 | [Kişisel web projem](https://github.com/umutberknc/umutberk138.github.io) | GitHub Pages üzerinde yayımlanan kişisel web projem. |
 
 > Bazı çalışmalarımı özel depolarda tutuyorum; bu nedenle özel depo adları ve içerikleri bu profilde yer almıyor.
